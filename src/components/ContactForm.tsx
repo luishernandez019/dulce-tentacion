@@ -131,7 +131,7 @@ export default function ContactForm() {
                 <div className="mb-4">
                   <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-1.5">
                     Teléfono{' '}
-                    <span className="text-stone-400 text-xs font-normal">(opcional)</span>
+                    <span className="text-stone-600 text-xs font-normal">(opcional)</span>
                   </label>
                   <input
                     type="tel" id="phone" name="phone" value={form.phone}
@@ -167,7 +167,7 @@ export default function ContactForm() {
                   {status === 'submitting' ? 'Enviando…' : 'Enviar mensaje'}
                 </button>
 
-                <p className="text-xs text-stone-400 mt-3 text-center">
+                <p className="text-xs text-stone-600 mt-3 text-center">
                   Tus datos están protegidos conforme a nuestro{' '}
                   <a href="/aviso-privacidad" className="underline hover:text-amber-800 transition-colors">
                     aviso de privacidad

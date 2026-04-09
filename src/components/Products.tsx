@@ -56,7 +56,7 @@ export default function Products() {
 
         {/* Footer CTA */}
         <div className="text-center mt-12">
-          <p className="text-stone-400 text-sm mb-4">
+          <p className="text-stone-600 text-sm mb-4">
             ¿No encuentras lo que buscas? Hacemos pedidos totalmente personalizados.
           </p>
           <Link href="#contacto" className="btn-primary">

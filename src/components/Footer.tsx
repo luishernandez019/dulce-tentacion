@@ -90,7 +90,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <address className="not-italic text-stone-500 text-sm leading-relaxed">
+                <address className="not-italic text-stone-400 text-sm leading-relaxed">
                   {SITE.address.street},{' '}
                   {SITE.address.neighborhood},{' '}
                   {SITE.address.city}
@@ -101,9 +101,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-stone-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-stone-600">
+        <div className="border-t border-stone-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-stone-400">
           <p>© {year} {SITE.name}. Todos los derechos reservados.</p>
-          <a href="/aviso-privacidad" className="hover:text-stone-400 transition-colors">
+          <a href="/aviso-privacidad" className="hover:text-white transition-colors">
             Aviso de privacidad
           </a>
         </div>

@@ -74,7 +74,7 @@ export default function Testimonials() {
                   <cite className="not-italic text-white font-semibold text-sm block">
                     {testimonial.name}
                   </cite>
-                  <span className="text-stone-500 text-xs">{testimonial.location}</span>
+                  <span className="text-stone-400 text-xs">{testimonial.location}</span>
                 </div>
               </footer>
             </article>
