@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
           <span className="section-label">Repostería Artesanal · Monterrey, N.L.</span>
 
-          <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-stone-900 leading-tight mt-4 mb-6">
+          <h1 className="font-fraunces text-5xl sm:text-6xl lg:text-7xl font-bold text-stone-900 leading-tight mt-4 mb-6">
             Sabores que{' '}
             <span className="relative inline-block">
               <span className="text-amber-800">enamoran</span>
@@ -66,17 +66,17 @@ export default function Hero() {
         {/* Social proof */}
         <div className="mt-14 flex items-center gap-8 justify-center animate-fade-in">
           <div className="text-center">
-            <p className="font-playfair text-2xl font-bold text-stone-900">+500</p>
+            <p className="font-fraunces text-2xl font-bold text-stone-900">+500</p>
             <p className="text-stone-500 text-xs">pedidos entregados</p>
           </div>
           <div className="h-8 w-px bg-stone-300" aria-hidden="true" />
           <div className="text-center">
-            <p className="font-playfair text-2xl font-bold text-stone-900">5★</p>
+            <p className="font-fraunces text-2xl font-bold text-stone-900">5★</p>
             <p className="text-stone-500 text-xs">valoración promedio</p>
           </div>
           <div className="h-8 w-px bg-stone-300" aria-hidden="true" />
           <div className="text-center">
-            <p className="font-playfair text-2xl font-bold text-stone-900">6 años</p>
+            <p className="font-fraunces text-2xl font-bold text-stone-900">6 años</p>
             <p className="text-stone-500 text-xs">de experiencia</p>
           </div>
         </div>

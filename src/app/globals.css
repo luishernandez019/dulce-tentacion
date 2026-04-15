@@ -47,7 +47,7 @@
   }
 
   .section-title {
-    @apply font-playfair text-3xl sm:text-4xl font-bold text-stone-900 mt-2;
+    @apply font-fraunces text-3xl sm:text-4xl font-bold text-stone-900 mt-2;
   }
 
   .card {

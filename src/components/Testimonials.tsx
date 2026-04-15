@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { TESTIMONIALS } from '@/lib/constants'
 
 function StarRating({ rating, name }: { rating: number; name: string }) {
@@ -37,7 +38,7 @@ export default function Testimonials() {
           </span>
           <h2
             id="testimonials-heading"
-            className="font-playfair text-3xl sm:text-4xl font-bold text-white mt-2"
+            className="font-fraunces text-3xl sm:text-4xl font-bold text-white mt-2"
           >
             Reseñas y testimonios
           </h2>
@@ -64,11 +65,20 @@ export default function Testimonials() {
               </blockquote>
 
               <footer className="mt-5 flex items-center gap-3 pt-4 border-t border-stone-700">
-                <div
-                  className="w-9 h-9 rounded-full bg-amber-800/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0"
-                  aria-hidden="true"
-                >
-                  {testimonial.name.charAt(0)}
+                <div className="w-9 h-9 rounded-full shrink-0 overflow-hidden bg-amber-800/30" aria-hidden="true">
+                  {testimonial.image ? (
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      width={36}
+                      height={36}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-amber-400 font-bold text-sm">
+                      {testimonial.name.charAt(0)}
+                    </div>
+                  )}
                 </div>
                 <div>
                   <cite className="not-italic text-white font-semibold text-sm block">

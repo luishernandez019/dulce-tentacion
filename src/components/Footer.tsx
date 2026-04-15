@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
-            <p className="font-playfair text-2xl font-bold text-white mb-2">
+            <p className="font-fraunces text-2xl font-bold text-white mb-2">
               {SITE.name}
             </p>
             <p className="text-stone-400 text-sm leading-relaxed mb-5">

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { PRODUCTS } from '@/lib/constants'
 
 export default function Products() {
@@ -29,26 +30,46 @@ export default function Products() {
         >
           {PRODUCTS.map((product) => (
             <li key={product.id}>
-              <article className="relative card p-6 h-full flex flex-col">
+              <article className="relative card h-full flex flex-col overflow-hidden">
                 {product.tag && (
-                  <span className="absolute top-4 right-4 bg-amber-800 text-white text-xs font-medium px-2.5 py-1 rounded-md">
+                  <span className="absolute top-3 right-3 z-10 bg-amber-800 text-white text-xs font-medium px-2.5 py-1 rounded-md">
                     {product.tag}
                   </span>
                 )}
-                <div className="w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-4">
-                  <span className="text-3xl select-none" aria-hidden="true">
-                    {product.emoji}
+
+                {/* Product image */}
+                <div className="relative w-full aspect-[4/3] bg-amber-50 shrink-0">
+                  {product.image ? (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    /* Placeholder visible hasta que agregues tu imagen */
+                    <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-amber-300">
+                      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 18h16.5M21 12V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12" />
+                      </svg>
+                      <span className="text-xs text-amber-400">Agrega tu imagen en constants.ts</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Content */}
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="font-fraunces text-lg font-semibold text-stone-900 mb-2">
+                    {product.name}
+                  </h3>
+                  <p className="text-stone-500 text-sm leading-relaxed flex-grow mb-4">
+                    {product.description}
+                  </p>
+                  <span className="text-amber-800 font-semibold text-sm">
+                    {product.price}
                   </span>
                 </div>
-                <h3 className="font-playfair text-lg font-semibold text-stone-900 mb-2">
-                  {product.name}
-                </h3>
-                <p className="text-stone-500 text-sm leading-relaxed flex-grow mb-4">
-                  {product.description}
-                </p>
-                <span className="text-amber-800 font-semibold text-sm">
-                  {product.price}
-                </span>
               </article>
             </li>
           ))}

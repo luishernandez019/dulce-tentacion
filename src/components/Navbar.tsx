@@ -31,7 +31,7 @@ export default function Navbar() {
       >
         <Link
           href="#inicio"
-          className="font-playfair text-xl font-bold text-amber-900 shrink-0"
+          className="font-fraunces text-xl font-bold text-amber-900 shrink-0"
           aria-label={`${SITE.name} — Ir al inicio`}
         >
           {SITE.name}
